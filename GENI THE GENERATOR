@@ -1,0 +1,31 @@
+import random
+
+MN = {'Elias': 'Hebrew','Kai': 'Hawaiian / Welsh / Scandinavian','Mateo': 'Spanish','Leo': 'Latin',
+      'Silas': 'Latin / Greek','Zion': 'Hebrew','Ezra': 'Hebrew','Asher': 'Hebrew',
+      'Noah': 'Hebrew', 'Micah': 'Hebrew', 'Liam': 'Irish', 'Jude': 'Hebrew / Latin',
+      'Elio': 'Italian / Spanish','Malachi': 'Hebrew','Finn': 'Irish','Arlo': 'English / Spanish',
+      'Rowan': 'Irish / Scottish','Theo': 'Greek'}
+FN =  {'Ava': 'Latin','Isla': 'Scottish','Naomi': 'Hebrew','Leilani': 'Hawaiian',
+    'Camila': 'Latin / Spanish','Sage': 'Latin / English','Luna': 'Latin','Aria': 'Hebrew / Italian',
+    'Maya': 'Hebrew / Sanskrit / Greek','Zoe': 'Greek','Aurora': 'Latin',
+    'Hazel': 'English','Freya': 'Norse','Ivy': 'English', 'Clara': 'Latin','Nova': 'Latin',
+    'Eliana': 'Hebrew / Latin / Greek', 'Thea': 'Greek'}
+while True:
+    start = input('Welcome to Geni! We make the most unique names in the world! What gender is your child? mf/ff): ')
+    if start == 'mf': 
+        first_name = random.choice(list(MN.keys()))
+        origin = MN[first_name]
+        last_name = input('What is your last name?')
+        print(f"Generated Name: {first_name} {last_name} (Origin: {origin})")
+    elif start == 'ff':
+        first_name = random.choice(list(FN.keys()))
+        origin = FN[first_name]
+        last_name = input('What is your last name?')
+        print(f"Generated Name: {first_name} {last_name} (Origin: {origin})")
+    else:
+        print("Invalid input. Please enter 'mf' or 'ff'.")
+
+    again = input('Would you like another name?(yes/no)').strip().lower()
+    if again not in ['yes', 'y']:
+        print("Thanks for using Geni! Goodbye 👋")
+        break
