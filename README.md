@@ -32,7 +32,7 @@ Installation
 
 Clone this repository:
 
-git clone https://github.com/yourusername/geni-the-generator.git
+git clone https://github.com/ajayncho/geni-the-generator.git
 cd geni-the-generator
 
 
